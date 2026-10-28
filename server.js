@@ -18,6 +18,15 @@ app.get('/jogos/:id', (req, res)=>{
     res.json(jogo);
 });
 
+app.post('/jogos', (req, res)=>{
+    const jogo = {
+        id: jogos.length + 1,
+        nome: req.body.nome,
+        empresa: req.body.empresa
+    };
+    livros.push(livro);
+    res.json(jogos);
+})
 
 app.listen(4000, ()=>{
     console.log("rodano");
